@@ -1,0 +1,52 @@
+<div class="my-form container-fluid w-50">
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (keyup)="setEmail($event)">
+          <small id="emailHelp" class="form-text text-muted"  >We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" (keyup)="setPassword($event)">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Description</label>
+            <input type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (keyup)="setTextArea($event)">
+            <small id="emailHelp" class="form-text text-muted"  >We'll never share your email with anyone else.</small>
+          </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" (change)="setConsent($event)">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="button" class="btn btn-primary" id="submitBtn" (click)="displayData()">Submit</button>
+      </form>
+      <div class="data-display" [class]="!shouldDisplay ? 'disable' : 'enable' ">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>                
+                <td>Email</td>
+                <td>{{email}}</td>
+              </tr>
+              <tr>                
+                <td>Password</td>
+                <td>{{password}}</td>
+              </tr>
+              <tr>                
+                <td>Summary</td>
+                <td>{{textArea | summarise}}</td>
+              </tr>
+              <tr>                
+                <td>Consent</td>
+                <td>{{consent}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div>
+</div>

@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-training';
+  
+  public text : string = "Enter your name";
+  public type : string = "text";
+  public paraContent : string = "";
+
+  displayText() {
+    console.log("Welcome to Angular")
+  }
+
+  typeContent(event:any) {
+
+    this.paraContent = event.target.value;
+  }
+
 }

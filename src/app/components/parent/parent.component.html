@@ -1,0 +1,11 @@
+<div class="input-output">
+    <div class="container">
+        <h1>Parent component</h1>
+        <h3 class="text-success input-label">Child says : {{childInputText}}</h3>
+        <div class="form-group">            
+           <input type="text" (keyup)="displayText($event)" class="form-control w-50">Text from Parent component
+        </div>
+
+        <app-child [parent-text]="parentText" (child-text)="saveText($event)"></app-child>
+    </div>
+</div>

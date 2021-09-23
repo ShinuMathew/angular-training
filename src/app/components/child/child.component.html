@@ -1,0 +1,9 @@
+<h1 class="text-secondary">Child component </h1>
+<h3 class="text-success">Parent says : {{parentInputText}}</h3>
+<div class="form-group">
+    <input type="text" class="form-control w-50" (keyup)="detectChange($event)">Text from Child component
+</div>
+
+<h1>Child component </h1>
+<h3>Parent says : {{parentInputText}}</h3>
+<input type="text" (keyup)="detectChange($event)">Text from Child component
