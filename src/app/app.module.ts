@@ -14,6 +14,9 @@ import { ChildComponent } from './components/child/child.component';
 import { MakoletComponent } from './makolet/makolet.component';
 import { ColorChangeDirective } from './directives/color-change.directive';
 import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
+import { EventBinderComponent } from './components/event-binder/event-binder.component';
+import { PhonenumberPipe } from './phonenumber.pipe';
+import { ChangeStyleDirective } from './directives/change-style.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { TemplateFormsComponent } from './components/template-forms/template-for
     ChildComponent,
     MakoletComponent,
     ColorChangeDirective,
-    TemplateFormsComponent
+    TemplateFormsComponent,
+    EventBinderComponent,
+    PhonenumberPipe,
+    ChangeStyleDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<!-- <h1 [class]="(type === 'password') ? 'red' : 'blue'">{{text}}</h1>
+<button type="button" (click)="changeColor()">Change -->
+<!-- <input [(ngModel)]="twoWayBindingText" type="number"> Enter PhoneNumber
+<h1>{{twoWayBindingText | phonenumber:'USA'}}</h1> -->
+
+<!-- <h1 [class]="(status === 'yettostart') ? 'orange' : (status === 'inprogress') ? 'blue' : (status === 'pending') ? 'red' : (status === 'yettostart') ? 'green' : 'black'" >Hello Angular</h1> -->
+<h1 [ngClass]="{
+    'orange' : status === 'yettostart',
+    'blue' : status === 'inprogress',
+    'red' : status === 'pending',
+    'green' : status === 'completed',
+    'bold' : status === 'completed'
+}">Hello Angular</h1>
+
+<button type="button" (click)="toggleStyle()">ToggleStyle</button>
+
+<h1 changeStyle >NG FOR</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SNo.</th>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Experience</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students;index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.exp}} years</td>
+      </tr>      
+    </tbody>
+  </table>

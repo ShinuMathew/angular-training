@@ -16,3 +16,5 @@ export class ColorChangeDirective {
 
 
 }
+
+// ngFor, ngIf, ngClass, ngStyle, ngSwitch, ngSubmit, ngModel, 
